@@ -1,0 +1,11 @@
+{
+  "name": "tdl",
+  "version": "1.0.0",
+  "description": "Simple TO-DO-List app",
+  "main": "app.js",
+  "scripts": {
+    "build": "workbox generateSW /workbox-config.js>"
+  },
+  "author": "vishalkumarvk082@gmail.com",
+  "license": "MIT"
+}

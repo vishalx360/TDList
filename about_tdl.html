@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        // Check that service workers are registered
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        } else {}
+    </script>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#004ba0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/icons/tdl-fev.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>TDL</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div style="background-color:#1976d2" id="nav" class="nav-wrapper">
+                <a href="#!" class="brand-logo center">TO DO LIST</a>
+
+
+                <ul id="slide-out" class="side-nav">
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <img src="icons/big2.jpg">
+                            </div>
+                            <a href="#!user">
+                                <img class="circle" src="icons/v.png">
+                            </a>
+
+                            <a href="mailto:kumarvishalben@gmail.com">
+                                <span class="white-text email"></span>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a class="waves-effect" href="/">
+                            <i class="material-icons">home</i>Home</a>
+                    </li>
+
+                    <li>
+                        <a class="waves-effect" href="/about_tdl.html">
+                            <i class="material-icons">info</i>About</a>
+                    </li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li>
+                        <a class="subheader">Links</a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="https://github.com/VK001/TDL">
+                            <i class="material-icons">code</i>Git Repository</a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+                            <i class="material-icons">receipt</i>License</a>
+                    </li>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+
+                    <li>
+                        <a href="about_tdl.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/VK001/TDL">Git Repository</a>
+                    </li>
+                    <li>
+                        <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">License</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+    <!-- About Page Starts here -->
+    <div style="padding: 0%" class="row">
+        <div class="col s12">
+            <div style="background-color: #004a9f" class="card-panel">
+                <span class="white-text">
+                    <h4>About</h4>
+                    <h6>TDL which stands for 'To Do List" is a Progressive Web App , made entirely from front-end Javascript
+                        which uses web-storage API to store content and comes with a service-worker to get offline functionality</h6>
+                </span>
+            </div>
+        </div>
+    </div>
+    <ul class="collapsible">
+
+        <li>
+            <div class="collapsible-header">
+                <i class="material-icons">storage</i>
+                Local Storage API
+                <span class="badge">
+                    <i class="material-icons">
+                        keyboard_arrow_down
+                    </i>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <p>The Web Storage API provides mechanisms by which browsers can store key/value pairs, in a much more intuitive
+                    fashion than using cookies.</p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">learn more</a>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <i class="material-icons">signal_wifi_off</i>
+                Works Offline
+                <span class="badge">
+                    <i class="material-icons">
+                        keyboard_arrow_down
+                    </i>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <p>A service worker is a script that your browser runs in the background, separate from a web page, opening
+                    the door to features that don't need a web page or user interaction. ... Before service worker, there
+                    was one other API that gave users an offline experience on the web called AppCache.</p>
+                <a href="https://developers.google.com/web/fundamentals/primers/service-workers/">learn more</a>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <i class="material-icons">format_paint</i>
+                Material Design
+                <span class="badge">
+                    <i class="material-icons">
+                        keyboard_arrow_down
+                    </i>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <p>Material Design is a design language developed by Google. Expanding upon the "card" motifs that debuted in
+                    Google Now, Material Design makes more liberal use of grid-based layouts, responsive animations and transitions,
+                    padding, and depth effects such as lighting and shadows.</p>
+                <a href="https://material.io/">learn more</a>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <i class="material-icons">code</i>
+                Source Code On Git
+                <span class="badge">
+                    <i class="material-icons">
+                        keyboard_arrow_down
+                    </i>
+                </span>
+            </div>
+            <div class="collapsible-body">
+                <p>GitHub is a web-based hosting service for version control using git. It is mostly used for computer code.
+                    It offers all of the distributed version control and source code management functionality of Git as well
+                    as adding its own features</p>
+                <a href="https://github.com/VK001/TDL">Go To Repository</a>
+            </div>
+        </li>
+    </ul>
+
+    <!-- About Page Starts here -->
+
+    <div class="fixed-action-btn">
+        <a style='background-color: #d32f2f' href="/index.html" id="addBtn" class="btn-floating btn-large waves-effect fixed waves-light right red">
+            <i class="material-icons">list</i>
+        </a>
+    </div>
+    <div style="height: 100px;" class="container"></div>
+    <footer>
+        <div style="
+        padding: 14px;
+        margin: auto;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #004a9f;
+        " class="card center">
+            <div class="chip">
+                <img src="/vk.jpg" alt="Contact Person"> Made By -- Vishal Kumar
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        $(".button-collapse").sideNav();
+    </script>
+</body>
+
+</html>

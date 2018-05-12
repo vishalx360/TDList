@@ -1,0 +1,40 @@
+{
+  "short_name": "TDL",
+  "name": "TDL",
+  "background_color": "#fff",
+  "description": "A simple TO-Do list app.",
+  "icons": [
+    {
+      "src": "/icons/tdl-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/icons/tdl-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/icons/tdl-144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/icons/tdl-196.png",
+      "type": "image/png",
+      "sizes": "196x196"
+    },
+    {
+      "src": "/icons/tdl-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+    
+     
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#004ba0"
+
+}
