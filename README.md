@@ -1,2 +1,6 @@
 # TDL
-TDL which stands for 'To Do List" is a Progressive Web App , made entirely from front-end Javascript which uses web-storage API to store content and comes with a service-worker to get offline functionality
+
+![TDList Poster](https://raw.githubusercontent.com/vishalx360/TDList/master/poster.jpg)
+
+TDList is a 'To Do List" is a Progressive Web App, which uses local-storage API to store content and uses service-worker to get offline functionality.
+
