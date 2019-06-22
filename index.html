@@ -2,147 +2,115 @@
 <html lang="en">
 
 <head>
-    <script>
-        // Check that service workers are registered
-        if ('serviceWorker' in navigator) {
-            // Use the window load event to keep the page load performant
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js');
-            });
-        } else {}
-    </script>
-    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#004ba0" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="/icons/tdl-fev.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="glider/glider.css">
 
-    <title>TDL</title>
+    <title>ToDoList</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div style="background-color:#1976d2" id="nav" class="nav-wrapper">
-                <a href="#!" class="brand-logo center">TO DO LIST</a>
+    <div id="header">
+        <i class="material-icons">
+            menu
+        </i>
+        <h1>TodoList</h1>
+        <div id="avatar"></div>
+    </div>
 
-
-                <ul id="slide-out" class="side-nav">
-                    <li>
-                        <div class="user-view">
-                            <div class="background">
-                                <img src="icons/big2.jpg">
-                            </div>
-                            <a href="#!user">
-                                <img class="circle" src="icons/v.png">
-                            </a>
-
-                            <a href="mailto:kumarvishalben@gmail.com">
-                                <span class="white-text email"></span>
-                            </a>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a class="waves-effect" href="/">
-                            <i class="material-icons">home</i>Home</a>
-                    </li>
-
-                    <li>
-                        <a class="waves-effect" href="/about_tdl.html">
-                            <i class="material-icons">info</i>About</a>
-                    </li>
-                    <li>
-                        <div class="divider"></div>
-                    </li>
-                    <li>
-                        <a class="subheader">Links</a>
-                    </li>
-                    <li>
-                        <a class="waves-effect" href="https://github.com/VK001/TDL">
-                            <i class="material-icons">code</i>Git Repository</a>
-                    </li>
-                    <li>
-                        <a class="waves-effect" href="https://www.gnu.org/licenses/gpl-3.0.en.html">
-                            <i class="material-icons">receipt</i>License</a>
-                    </li>
-                </ul>
-                <a href="#" data-activates="slide-out" class="button-collapse">
-                    <i class="material-icons">menu</i>
-                </a>
-                <ul class="right hide-on-med-and-down">
-
-                    <li>
-                        <a href="about_tdl.html">About</a>
-                    </li>
-
-                    <li>
-                        <a href="https://github.com/VK001/TDL">Git Repository</a>
-                    </li>
-                    <li>
-                        <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">License</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-
-
-
-
-
-    <!-- todo list app start -->
-
-    <div class="container">
-        <div class="row">
-            <div class="col s12">
-                <div id="main" class="card">
-                    <div id="addCard" class="card-content">
-                        <span class="card-title">Add Task</span>
-                        <div class="row">
-                            <form id="task-form">
-                                <div class="input-field col s12">
-                                    <input type="text" name="task" id="tasks">
-                                    <label for="task">New Task</label>
-                                </div>
-                                <input type="submit" value="Add Task" class="btn waves-effect waves-light blue">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="card-action">
-                        <h5 id="task-title">Tasks</h5>
-                        <div class="input-field col s12">
-                            <input type="text" name="filter" id="filter">
-                            <label for="filter">Search Tasks</label>
-                        </div>
-                        <ul class="collection"></ul>
-                        <a href="" class="clear-tasks btn black">Clear</a>
-                    </div>
+    <div id="pinnedList">
+        <div class="glider">
+            <figure>
+                <div class="listImage"></div>
+                <div class="listContent">
+                    <h2>heading</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
                 </div>
-            </div>
+            </figure>
+            <figure>
+                <div class="listImage"></div>
+                <div class="listContent">
+                    <h2>heading</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+            </figure>
+            <figure>
+                <div class="listImage"></div>
+                <div class="listContent">
+                    <h2>heading</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+            </figure>
+            <figure>
+                <div class="listImage"></div>
+                <div class="listContent">
+                    <h2>heading</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+            </figure>
         </div>
     </div>
 
-    <div class="fixed-action-btn">
-        <a ondblclick="hide()" style='background-color: #d32f2f' id="addBtn" class="btn-floating btn-large waves-effect fixed waves-light right red">
-            <i class="material-icons">add</i>
-        </a>
+
+    <div id="actions">
+        <i class="material-icons">notes</i>
+        <i class="material-icons">cloud_done</i>
+        <i class="material-icons">delete_sweep</i>
     </div>
 
-    <!-- todo list end -->
+    <div>
+        <ul id="list">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="app.js"></script>
-    <script>
-        $(".button-collapse").sideNav();
-    </script>
+            <li class="task green-blue">
+                <i class="material-icons task-checkbox">check_circle_outline</i>
+                <p class="task-Content">
+                    Do the Loundry lorem5
+                </p>
+                <i class="material-icons task-editBtn">edit</i>
+            </li>
+
+            <li class="task pink-blue">
+                <i class="material-icons task-checkbox">check_circle_outline</i>
+                <p class="task-Content">
+                    Do the Loundry lorem5
+                </p>
+                <i class="material-icons task-editBtn">edit</i>
+            </li>
+            <li class="task red-yellow">
+
+                <i class="material-icons task-checkbox">check_circle_outline</i>
+                <p class="task-Content">
+                    Do the Loundry lorem5
+                </p>
+                <i class="material-icons task-editBtn">edit</i>
+            </li>
+            <li class="task lightBlue-blue">
+
+                <i class="material-icons task-checkbox">check_circle_outline</i>
+                <p class="task-Content">
+                    Do the Loundry lorem5
+                </p>
+                <i class="material-icons task-editBtn">edit</i>
+            </li>
+        </ul>
+    </div>
+
+    <div id="footer">
+        <i id="addTaskBtn" class="material-icons">
+            add_circle
+        </i>
+    </div>
+
+    <script src="glider/glider.js"></script>
+    <script src="application.js"></script>
+    <!-- <script src="app.js"></script> -->
 </body>
 
 </html>
